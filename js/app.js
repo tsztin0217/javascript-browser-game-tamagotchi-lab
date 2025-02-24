@@ -20,7 +20,7 @@ const resetBtnEl = document.getElementById('restart');
 /*-------------------------------- Functions --------------------------------*/
 const init = () => {
     gameOver = false;
-    timer = setInterval(runGame(), 2000);
+    timer = setInterval(runGame, 2000);
 }
 
 const runGame = () => {
@@ -39,9 +39,9 @@ const randomNum0to3 = () => {
 }
 
 const updateStates = () => {
-    state.boredom += randomNum0to3;
-    state.hunger += randomNum0to3;
-    state.sleepiness += randomNum0to3;
+    state.boredom += randomNum0to3();
+    state.hunger += randomNum0to3();
+    state.sleepiness += randomNum0to3();
 }
 
 init();
